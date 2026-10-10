@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SnapClass uses face and voice AI to make classroom attendance fast, simple, and secure.">
+    <title>SnapClass | Attendance in one snap</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo .png') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="#home" aria-label="SnapClass home">
+            <img src="{{ url_for('static', filename='img/logo .png') }}" alt="">
+            <span class="logo-text">SnapClass</span>
+        </a>
+        <div class="nav-links">
+            <a class="active" href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#journey">Journey</a>
+            <a href="#tech-stack">Tech Stack</a>
+        </div>
+        <div class="nav-cta"><a href="#" data-app-link class="btn-pill">Start AI Attendance <span aria-hidden="true">↗</span></a></div>
+    </nav>
+
+    <main>
+        <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span></span> Smart attendance, made simple</p>
+                <h1 id="hero-title">Attendance in <span>one snap.</span></h1>
+                <p class="hero-intro">Face and voice AI replaces roll calls and helps stop proxy attendance, so teachers can spend more time teaching.</p>
+                <div class="hero-actions"><a href="#" data-app-link class="button button-primary">Start AI Attendance <span aria-hidden="true">↗</span></a><a href="#journey" class="button button-secondary">See how it works <span aria-hidden="true">↓</span></a></div>
+                <div class="hero-stats" aria-label="SnapClass capabilities"><div><strong>Face</strong><span>Recognition</span></div><div><strong>Voice</strong><span>Verification</span></div><div><strong>Live</strong><span>Class records</span></div></div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+                <figure class="hero-image"><img src="{{ url_for('static', filename='img/demo/snap-landing.png') }}" alt="SnapClass attendance app screen"></figure>
+                <div class="float-tag face-tag"><span>✓</span> Face ID</div><div class="float-tag voice-tag"><span>✓</span> Voice verified</div><div class="float-tag record-tag"><span class="live-dot"></span> Records saved</div>
+            </div>
+        </section>
+
+        <section class="section section-features" id="features" aria-labelledby="features-title">
+            <div class="section-heading reveal"><p class="section-label">— What it does —</p><h2 id="features-title">A smoother way to<br>show up and learn.</h2><p>Everything your classroom needs to make attendance feel effortless.</p></div>
+            <div class="feature-grid">
+                <article class="feature-card reveal"><span class="feature-icon icon-yellow" aria-hidden="true">◉</span><h3>FaceID Login</h3><p>Students sign in securely with a quick face scan.</p><span class="card-number">01</span></article>
+                <article class="feature-card reveal"><span class="feature-icon icon-lavender" aria-hidden="true">▧</span><h3>Classroom Photo Attendance</h3><p>Capture multiple photos and recognize many faces at once.</p><span class="card-number">02</span></article>
+                <article class="feature-card reveal"><span class="feature-icon icon-pink" aria-hidden="true">〰</span><h3>Voice Attendance</h3><p>Offer a hands-free way to verify students in class.</p><span class="card-number">03</span></article>
+                <article class="feature-card reveal"><span class="feature-icon icon-blue" aria-hidden="true">⌗</span><h3>Subject Codes</h3><p>Share a code so students can quickly join the right subject.</p><span class="card-number">04</span></article>
+                <article class="feature-card reveal"><span class="feature-icon icon-pink" aria-hidden="true">▤</span><h3>Attendance Records</h3><p>Review present and absent counts by subject and date.</p><span class="card-number">05</span></article>
+                <article class="feature-card reveal"><span class="feature-icon icon-yellow" aria-hidden="true">▥</span><h3>Student Dashboard</h3><p>See total and attended classes for every subject.</p><span class="card-number">06</span></article>
+            </div>
+        </section>
+
+        <section class="section section-journey" id="journey" aria-labelledby="journey-title">
+            <div class="section-heading reveal"><p class="section-label">— The workflow —</p><h2 id="journey-title">Every class, a little easier.</h2><p>Pick a path to see how SnapClass fits your classroom.</p></div>
+            <div class="journey-tabs" role="tablist" aria-label="Choose a journey">
+                <button class="journey-tab is-selected" id="teacher-tab" role="tab" aria-selected="true" aria-controls="teacher-journey" tabindex="0">Teacher journey</button>
+                <button class="journey-tab" id="student-tab" role="tab" aria-selected="false" aria-controls="student-journey" tabindex="-1">Student journey</button>
+            </div>
+            <div class="journey-panel" id="teacher-journey" role="tabpanel" aria-labelledby="teacher-tab">
+                <article class="journey-step reveal"><div class="step-copy"><p class="step-label">STEP 01 <span>•</span> GET STARTED</p><h3>Secure login</h3><p>Sign in with a username and password, or register to create a teacher account. Passwords are protected with bcrypt.</p></div><figure class="step-figure"><img src="{{ url_for('static', filename='img/demo/snap.teacher-flow-login-1-login.png') }}" alt="SnapClass teacher login screen"><figcaption>Teacher sign in</figcaption></figure></article>
+                <article class="journey-step reverse reveal"><div class="step-copy"><p class="step-label">STEP 02 <span>•</span> SET UP CLASS</p><h3>Create a subject</h3><p>Add a subject name, code, and section, then share the code with students so they can enroll.</p></div><figure class="step-figure"><img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-4-share-qr-or-link.png') }}" alt="Teacher sharing a class code or QR link"><figcaption>Share the subject with your class</figcaption></figure></article>
+                <article class="journey-step reveal"><div class="step-copy"><p class="step-label">STEP 03 <span>•</span> TAKE ATTENDANCE</p><h3>Capture the classroom</h3><p>Choose a subject, add classroom photos, or take attendance with voice.</p></div><figure class="step-figure workflow-gallery"><div><img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5.2-photo-attendance.png') }}" alt="Teacher using photo attendance in a classroom"><span>Photo attendance</span></div><div><img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5.1-voice-attendance.png') }}" alt="Teacher using voice attendance"><span>Voice attendance</span></div><figcaption>Choose how to take attendance</figcaption></figure></article>
+                <article class="journey-step reverse reveal"><div class="step-copy"><p class="step-label">STEP 04 <span>•</span> LET AI CHECK</p><h3>Run face analysis</h3><p>SnapClass scans the submitted photos and marks enrolled students present or absent.</p></div><div class="step-figure placeholder-figure" role="img" aria-label="Screenshot not available for face analysis"><div class="placeholder-mark">＋</div><p>Face analysis results</p><span>Screenshot not available</span></div></article>
+                <article class="journey-step reveal"><div class="step-copy"><p class="step-label">STEP 05 <span>•</span> REVIEW</p><h3>Records at a glance</h3><p>See attendance summaries by time and subject, with clear present and absent counts.</p></div><figure class="step-figure"><img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5-see-stored-records.png') }}" alt="Teacher reviewing stored attendance records"><figcaption>Saved class records</figcaption></figure></article>
+            </div>
+            <div class="journey-panel" id="student-journey" role="tabpanel" aria-labelledby="student-tab" hidden>
+                <article class="journey-step reveal"><div class="step-copy"><p class="step-label">STEP 01 <span>•</span> SIGN IN</p><h3>FaceID login</h3><p>Look at the camera for a quick, convenient student sign in.</p></div><figure class="step-figure"><img src="{{ url_for('static', filename='img/demo/snap-student-take-camra attdence.png') }}" alt="Student using the camera attendance screen"><figcaption>Student camera check in</figcaption></figure></article>
+                <article class="journey-step reverse reveal"><div class="step-copy"><p class="step-label">STEP 02 <span>•</span> FIRST TIME</p><h3>Register once</h3><p>New students enter their name and can optionally enroll their voice.</p></div><div class="step-figure placeholder-figure" role="img" aria-label="Screenshot not available for student registration"><div class="placeholder-mark">＋</div><p>Student registration</p><span>Screenshot not available</span></div></article>
+                <article class="journey-step reveal"><div class="step-copy"><p class="step-label">STEP 03 <span>•</span> JOIN CLASS</p><h3>Enroll in a subject</h3><p>Enter the subject code shared by your teacher to join the class.</p></div><figure class="step-figure"><img src="{{ url_for('static', filename='img/demo/snap-student-enrollclass-useclass-code.png') }}" alt="Student entering a subject code to enroll"><figcaption>Join with a subject code</figcaption></figure></article>
+                <article class="journey-step reverse reveal"><div class="step-copy"><p class="step-label">STEP 04 <span>•</span> KEEP TRACK</p><h3>Track attendance</h3><p>Check total classes and attended classes for each enrolled subject.</p></div><figure class="step-figure"><img src="{{ url_for('static', filename='img/demo/snap-student-flow-3-dashboard.png') }}" alt="Student attendance dashboard with subject totals"><figcaption>Your attendance dashboard</figcaption></figure></article>
+            </div>
+        </section>
+
+        <section class="section section-tech" id="tech-stack" aria-labelledby="tech-title">
+            <div class="section-heading reveal"><p class="section-label">— Under the hood —</p><h2 id="tech-title">Built with useful tools.</h2><p>A practical stack that brings recognition, records, and classroom workflows together.</p></div>
+            <div class="tech-groups reveal">
+                <div class="tech-group"><h3>App &amp; data</h3><div class="chip-list"><span>Streamlit <small>UI</small></span><span>Supabase <small>Database</small></span><span>bcrypt <small>Security</small></span></div></div>
+                <div class="tech-group"><h3>Recognition</h3><div class="chip-list"><span>dlib</span><span>face_recognition_models</span><span>Resemblyzer</span><span>librosa</span><span>scikit-learn</span></div></div>
+                <div class="tech-group"><h3>Data &amp; utilities</h3><div class="chip-list"><span>Segno <small>QR</small></span><span>NumPy</span><span>Pandas</span><span>Pillow</span></div></div>
+            </div>
+            <div class="pipeline reveal" aria-label="Attendance data pipeline"><div>Capture</div><span aria-hidden="true">→</span><div>Embedding</div><span aria-hidden="true">→</span><div>Compare / Classify</div><span aria-hidden="true">→</span><div>Mark attendance</div><span aria-hidden="true">→</span><div>Supabase</div></div>
+        </section>
+
+        <section class="cta-band reveal" aria-labelledby="cta-title"><div><p class="section-label">— Your next class —</p><h2 id="cta-title">Ready to take attendance<br>in one snap?</h2></div><a href="#" data-app-link class="button button-dark">Start AI Attendance <span aria-hidden="true">↗</span></a></section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-brand" href="#home"><img src="{{ url_for('static', filename='img/logo .png') }}" alt=""><span>SnapClass</span></a>
+        <nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#features">Features</a><a href="#journey">Journey</a><a href="#tech-stack">Tech Stack</a></nav>
+        <div class="footer-meta"><a href="https://github.com/vishu56096-ctrl/SnapClass-AI-Attendance" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/vishal-kumar-7a4003393/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><span>Created by Vishal Kumar</span></div>
+    </footer>
+</body>
+</html>
