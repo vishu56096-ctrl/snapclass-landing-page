@@ -39,7 +39,7 @@ You can host this site for free on:
 
 ## 📸 Preview
 
-![SnapClass Landing Page](images/preview.png)
+![SnapClass Landing Page](https://raw.githubusercontent.com/vishu56096-ctrl/snapclass-landing-page/main/images/preview.png)
 
 ---
 
